@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="搭哒是一款面向同校用户的找搭子产品，覆盖运动、学习与娱乐三类场景。">
+  <title>搭哒 同校找搭子平台</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="返回顶部">搭哒</a>
+    <nav aria-label="页面导航">
+      <a href="#overview">产品概览</a>
+      <a href="#flow">核心流程</a>
+      <a href="#rules">产品规则</a>
+      <a href="#scope">版本范围</a>
+      <a class="nav-cta" href="https://github.com/Yanzi1-creator11/dada-product/blob/main/PRD.md">查看 PRD</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">同校用户 · 运动 / 学习 / 娱乐</p>
+        <h1>把“找个人一起”<br>变成一条清楚的流程</h1>
+        <p class="lead">搭哒围绕具体事项连接同校用户，通过规则筛选、多人邀请和安排确认，帮助参与者在接受前看清条件，在加入后确认同一版活动安排。</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/Yanzi1-creator11/dada-product/blob/main/PRD.md">阅读完整 PRD</a>
+          <a class="button secondary" href="#flow">查看核心流程</a>
+        </div>
+        <ul class="facts" aria-label="版本信息">
+          <li><strong>3</strong><span>一级类别</span></li>
+          <li><strong>12</strong><span>功能模块</span></li>
+          <li><strong>91</strong><span>业务规则</span></li>
+          <li><strong>39</strong><span>核心验收</span></li>
+        </ul>
+      </div>
+      <div class="hero-panel" aria-label="产品流程摘要">
+        <div class="panel-label">一次找搭子的完整闭环</div>
+        <ol class="mini-flow">
+          <li><span>01</span><div><b>发布需求</b><small>事项、时间、方式、人数</small></div></li>
+          <li><span>02</span><div><b>规则筛选</b><small>只返回通过硬条件的候选</small></div></li>
+          <li><span>03</span><div><b>邀请加入</b><small>控制有效期、名额与并发</small></div></li>
+          <li><span>04</span><div><b>确认安排</b><small>所有成员确认同一版本</small></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="section-heading">
+        <p class="eyebrow">Product overview</p>
+        <h2>产品概览</h2>
+        <p>首版只解决具体事项找人，不建设内容社区，也不依赖难以解释的推荐分数。</p>
+      </div>
+      <div class="grid three">
+        <article class="card accent-blue">
+          <span class="card-index">01</span>
+          <h3>明确需求</h3>
+          <p>用结构化字段说明要做什么、什么时候参与、线上或线下、需要几人以及必要偏好。</p>
+        </article>
+        <article class="card accent-purple">
+          <span class="card-index">02</span>
+          <h3>解释候选</h3>
+          <p>先执行同校、事项、时间、参与方式等硬条件过滤，再展示可以复核的候选理由。</p>
+        </article>
+        <article class="card accent-orange">
+          <span class="card-index">03</span>
+          <h3>约成活动</h3>
+          <p>邀请支持多人、有效期和并发名额；成员加入后共同确认日期、时间和集合安排。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section flow-section" id="flow">
+      <div class="section-heading">
+        <p class="eyebrow">Core flow</p>
+        <h2>核心用户流程</h2>
+        <p>主流程覆盖发布、筛选、邀请、接受、破冰和安排确认，同时保留空结果、超时与满员分支。</p>
+      </div>
+      <div class="flow" role="list">
+        <div class="flow-item" role="listitem"><span>1</span><h3>模拟认证</h3><p>确认测试账号的学校与校区，持续标注认证边界。</p></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-item" role="listitem"><span>2</span><h3>发布需求</h3><p>选择类别和具体事项，填写时间、方式与人数。</p></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-item" role="listitem"><span>3</span><h3>查看候选</h3><p>资格先过滤，结果再排序；没有候选时如实为空。</p></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-item" role="listitem"><span>4</span><h3>邀请接受</h3><p>接受时重新校验资格和名额，避免过期结果超员。</p></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-item" role="listitem"><span>5</span><h3>确认安排</h3><p>逐人确认同一版本；关键变化后重新确认。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="rules">
+      <div class="section-heading">
+        <p class="eyebrow">Product rules</p>
+        <h2>关键产品规则</h2>
+      </div>
+      <div class="rule-grid">
+        <article><strong>规则匹配</strong><p>AI 不参与候选资格判断。不同类别、事项不一致或共同时间不足 30 分钟时不进入候选。</p></article>
+        <article><strong>真实空结果</strong><p>候选为零时只显示空状态和修改条件入口，不放宽规则，也不注入虚构推荐。</p></article>
+        <article><strong>多人名额</strong><p>目标人数为 2—4 人；达到目标后显示“已找齐”，不自动关闭活动。</p></article>
+        <article><strong>邀请控制</strong><p>每条需求最多 5 个有效邀请；邀请在发送后 3 小时或活动开始时失效，以较早者为准。</p></article>
+        <article><strong>隐私控制</strong><p>联系方式默认不公开；性别仅用于双方偏好判断，候选卡不展示性别原值。</p></article>
+        <article><strong>AI 破冰</strong><p>用户主动生成 3 条话术，可以编辑和复制；系统不自动生成，也不代替用户发送。</p></article>
+      </div>
+    </section>
+
+    <section class="section scope-section" id="scope">
+      <div class="section-heading">
+        <p class="eyebrow">MVP scope</p>
+        <h2>首版边界</h2>
+      </div>
+      <div class="scope-grid">
+        <div class="scope-column in">
+          <h3>本期包含</h3>
+          <ul>
+            <li>运动、学习、娱乐三类需求</li>
+            <li>发布、修改、暂停和取消</li>
+            <li>规则候选和空结果</li>
+            <li>多人邀请与名额控制</li>
+            <li>安排版本与逐人确认</li>
+            <li>联系方式与 AI 破冰辅助</li>
+          </ul>
+        </div>
+        <div class="scope-column out">
+          <h3>本期不包含</h3>
+          <ul>
+            <li>社区动态与内容推荐流</li>
+            <li>支付和费用分摊</li>
+            <li>实时定位和轨迹</li>
+            <li>复杂用户画像和信用分</li>
+            <li>完整即时通讯</li>
+            <li>真实学校身份系统接入</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section evidence">
+      <div>
+        <p class="eyebrow">Evidence boundary</p>
+        <h2>不把假设写成结果</h2>
+      </div>
+      <p>方案区分已有材料、已确认决策、待验证假设与新增建议。缺少原始访谈、问卷或真实试点数据时，不将材料数字表述为需求结论或项目成果。</p>
+    </section>
+
+    <section class="cta-section">
+      <p class="eyebrow">Full document</p>
+      <h2>查看完整产品需求文档</h2>
+      <p>完整版包含功能需求、业务规则、状态机、非功能要求、埋点、风险和 Given-When-Then 验收标准。</p>
+      <a class="button primary" href="https://github.com/Yanzi1-creator11/dada-product/blob/main/PRD.md">打开 PRD v4.0</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>搭哒 同校找搭子平台</span>
+    <span>产品需求文档 v4.0</span>
+  </footer>
+</body>
+</html>
+
